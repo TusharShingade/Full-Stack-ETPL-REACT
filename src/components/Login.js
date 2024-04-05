@@ -24,7 +24,7 @@ export default function Login()
         });
       }
 const userLogin = () =>{
-    axios.post("http://localhost:9002/login", user)
+    axios.post("http://localhost:3000/login", user)
     .then( res => alert(res.data.message))
     localStorage.setItem('userInfo', JSON.stringify({ ...user, active: true }));
     navigate("/userhome");
