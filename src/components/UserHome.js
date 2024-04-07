@@ -7,7 +7,7 @@ export function UserHome() {
   const loggedInUserEmail = JSON.parse(localStorage.getItem("userInfo")).email;
 
   useEffect(() => {
-    axios.get("http://localhost:3000/users")
+    axios.get("https://easy-blue-miniskirt.cyclic.app/users")
       .then(res => {
         const updatedUsers = res.data.map(user => ({
           ...user,
