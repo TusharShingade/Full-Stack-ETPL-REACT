@@ -24,7 +24,7 @@ export default function Login()
         });
       }
 const userLogin = () =>{
-    axios.post("https://easy-blue-miniskirt.cyclic.app/login", user)
+    axios.get("https://easy-blue-miniskirt.cyclic.app/login", user)
     .then( res => alert(res.data.message))
     localStorage.setItem('userInfo', JSON.stringify({ ...user, active: true }));
     navigate("/userhome");
