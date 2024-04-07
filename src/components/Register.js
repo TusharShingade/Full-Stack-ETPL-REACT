@@ -25,7 +25,7 @@ const registerUser = () => {
   const {name,bdate,email,password}= user
   if(name && bdate  && email && password)
   {
-    axios.get("https://easy-blue-miniskirt.cyclic.app/register", user)
+    axios.post("https://easy-blue-miniskirt.cyclic.app/register", user)
     .then(res => alert(res.data.message))
     localStorage.setItem('userInfo', JSON.stringify({ ...user, active: true }));
     
